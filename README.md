@@ -41,7 +41,7 @@ The Task Management Application is designed to streamline task handling within a
 
 1. **Clone the repository:**
    git clone https://github.com/AsemAdel98/tmfe01.git
-   cd task-management-app
+   cd tmfe01
 
 2. **Install dependencies:**
    npm install
@@ -74,3 +74,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 - Mahmoud Medhat (manager@info.co, password: 12345678) - Manager
 - Mohamed Salah (user@info.co, password: 12345678) - User
 - Amr Adel (amr.adel@info.co, password: 12345678) - User
+
+### Website
+
+Visit the Task Management Application at [https://tmbe01-7b347.web.app](https://tmbe01-7b347.web.app) to see it in action!
