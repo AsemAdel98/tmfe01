@@ -1,0 +1,41 @@
+<div class="container-fluid " dir="ltr">
+  <!-- The fluid container to ensure responsiveness, with padding -->
+  <!-- A row to align and justify the contents (login form and side image) -->
+  <div class="row d-flex align-items-center justify-content-between">
+    <!-- Logo image at the top of the page -->
+    <div class="col-xl-6 px-5">
+      <div class="login-page-logo mb-4"></div>
+      <!-- Header for the login form -->
+        <h1 class="mb-4">{{ 'LOGIN.WELCOME_BACK' | translate }}</h1>
+      <!-- Form with Angular's reactive form binding -->
+      <form [formGroup]="loginForm">
+        <!-- Username input with floating label -->
+        <div class="p-float-label mb-5">
+          <input id="username" type="text" formControlName="username" pInputText dir="ltr" class="w-100 p-3" />
+          <label for="username">{{'LOGIN.EMAIL' |translate}}</label>
+        </div>
+
+        <!-- Password input with PrimeNG's p-password component and floating label -->
+        <div class="p-float-label mb-5">
+          <p-password id="password" formControlName="password" [toggleMask]="true" dir="ltr" inputStyleClass="w-100 p-3"
+            [feedback]="false"></p-password>
+          <label for="password">{{'LOGIN.PASSWORD' |translate}}</label>
+        </div>
+      </form>
+      <!-- Login button, aligned to the right -->
+      <div class="d-flex justify-content-end my-4">
+        <button pButton [disabled]="!loginForm.valid || loading" [rounded]="true" (click)="onSubmit()" [outlined]="true"
+          severity="secondary">
+          <i *ngIf="!loading" class="pi pi-arrow-right mx-2"></i>
+          <i *ngIf="loading" class="pi pi-spin pi-spinner mx-2"></i>{{'LOGIN.LOGIN' |translate}}
+        </button>
+      </div>
+    </div>
+    <!-- The column containing the login form -->
+
+    <!-- The column for the side image -->
+    <div class="col-xl-6 d-flex justify-content-center align-items-center">
+      <img class="side-img" src="../../../../../assets/imgs/task-mangement.jpg" alt="Image" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row my-2">
+  <div class="d-flex align-items-center">
+    <p-inputSwitch [(ngModel)]="isAnalyticsShown" [ngModelOptions]="{standalone: true}" />
+    <span class="mx-3">{{(isAnalyticsShown?'GENERAL.HIDE_ANALYTICS':'GENERAL.SHOW_ANALYTICS')|translate}}</span>
+  </div>
+</div>
+
+<div class="row analytics-card" *ngIf="analyticsArray" [style.display]="isAnalyticsShown ? '' : 'none'">
+@for (item of analyticsArray.data; track $index) {
+<div [ngClass]="analyticsArray.size?'col-xl-'+analyticsArray.size:'col'" class="my-2">
+  <p-card [ngStyle]="{'background-color': item.background_color,  color: item.color }">
+    <ng-template pTemplate="header">
+      <div class="d-flex justify-content-between  align-items-center p-3">
+        <h2>{{item.name|translate}}</h2>
+        <div class="material-symbols-outlined">{{item.icon}}</div>
+      </div>
+    </ng-template>
+    <h1>{{item.value}}</h1>
+  </p-card>
+</div>
+}
+</div>

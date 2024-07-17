@@ -1,0 +1,48 @@
+
+<app-analytics-card [analyticsArray]="analytics"></app-analytics-card>
+<div class="d-flex justify-content-end align-items-center my-3">
+  <p-button outlined="true" size="small">
+    <span class="material-symbols-outlined">Filter_List</span>&nbsp;&nbsp; {{ 'GENERAL.FILTERS' | translate }}
+  </p-button>
+  &nbsp;&nbsp;
+  <p-button size="small" (onClick)="createUpdateUser()">
+    <span class="material-symbols-outlined">add</span>&nbsp;&nbsp;{{ 'USERS.ADD_NEW_USER' | translate }}</p-button>
+</div>
+<p-card header="All users ({{users.length}})">
+  <p-table [value]="users" [scrollable]="true"
+    styleClass="p-datatable-striped table-heder-nowrap p-datatable-gridlines">
+    <ng-template pTemplate="header">
+      <tr>
+        @for (item of columns; track $index) {
+        <th>{{item |translate}}</th>
+        }
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+      <tr>
+        <td>
+          <div class="d-inline-flex align-items-center">
+            <img [src]="user.avatar" class="mx-2" [alt]="user.username">
+            {{user.first_name}}
+            {{user.last_name}}
+          </div>
+        </td>
+        <td>{{user.phone_number}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.national_id}}</td>
+        <td>
+          <p-button (click)="menu.toggle($event);getUserData(user)" icon="pi pi-ellipsis-v" class="w-100"
+            styleClass="p-button-rounded p-button-secondary p-button-text custom-menu-class"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
+
+<p-menu #menu [model]="items" [popup]="true">
+  <ng-template pTemplate="item" let-item>
+    <p-button (click)="item.command" styleClass="p-button-secondary p-button-text" [label]="item.label |translate"
+      [icon]="item.icon"></p-button>
+  </ng-template>
+</p-menu>

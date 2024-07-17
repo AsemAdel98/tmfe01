@@ -1,0 +1,5 @@
+<h2>{{ 'NAVBAR.LOGGED_OUT_MSG' | translate }}</h2>
+<div class="card-button-container">
+<p-button size="small" (onClick)="logout()">{{ "GENERAL.LOGOUT" | translate }}</p-button>&nbsp;&nbsp;
+<p-button outlined="true" size="small" severity="secondary" (onClick)="ref.close('close')">{{ "GENERAL.CANCEL" |translate }}</p-button>
+</div>

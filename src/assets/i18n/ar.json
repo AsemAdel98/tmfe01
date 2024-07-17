@@ -1,0 +1,87 @@
+{
+  "LOGIN": {
+    "WELCOME_BACK": "مرحبًا بعودتك",
+    "EMAIL": "البريد الإلكتروني",
+    "PASSWORD": "كلمة المرور",
+    "LOGIN": "تسجيل الدخول"
+  },
+  "NAVBAR": {
+    "ARABIC": "العربيه",
+    "ENGLISH": "الانجليزيه",
+    "LOGGED_OUT_MSG": "هل أنت متأكد أنك تريد تسجيل الخروج؟"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "لوحة القيادة",
+    "USERS": "المستخدمين",
+    "TASKS": "المهام",
+    "USER_PROFILE": "ملف المستخدم"
+  },
+  "GENERAL": {
+    "NAME_EN": "الاسم بالإنجليزية",
+    "NAME_AR": "الاسم بالعربية",
+    "CREATED_AT": "تاريخ الإنشاء",
+    "CREATED_BY": "تم الإنشاء بواسطة",
+    "MODIFIED_AT": "تاريخ التعديل",
+    "FILTERS": "الفلاتر",
+    "DELETE": "حذف",
+    "DELETE_WARNING": "هل أنت متأكد أنك تريد الحذف",
+    "EDIT": "تعديل",
+    "ADD": "إنشاء",
+    "SAVE": "حفظ",
+    "VIEW": "عرض",
+    "CANCEL": "إلغاء",
+    "BACK": "السابق",
+    "ACTIONS": "الإجراءات",
+    "SUBMIT": "إرسال",
+    "ID": "المعرف",
+    "SHOW_ANALYTICS": "إظهار التحليلات",
+    "HIDE_ANALYTICS": "إخفاء التحليلات",
+    "ASSIGNED": "مخصص",
+    "LOGOUT": "تسجيل الخروج"
+  },
+  "PASSWORD": {
+    "CONFIRM_PASSWORD_ALERT": "كلمات المرور غير متطابقة.",
+    "FORMULATE_PASSWORDS": "صياغة كلمات مرور آمنة",
+    "ONE_LOWERCASE": "على الأقل حرف واحد صغير",
+    "ONE_UPPERCASE": "على الأقل حرف واحد كبير",
+    "ONE_NUMBRIC": "على الأقل رقم واحد",
+    "ONE_SYMBOL": "على الأقل رمز واحد",
+    "8_CHARACTERS": "الحد الأدنى 8 أحرف",
+    "LOGOUT": "تسجيل الخروج"
+  },
+  "IMAGE_SELECTOR": {
+    "SELECT_IMAGE": "اختر صورة",
+    "SELECT_ICON": "اختر أيقونة",
+    "UPLOAD_IMAGE": "تحميل الصورة",
+    "BROWSE_IMG": "تصفح الصور",
+    "CHOOSE_IMG_MSG": "قم بسحب وإسقاط الملفات إلى هنا للتحميل."
+  },
+  "TASKS": {
+    "ADD_NEW_TASK": "إضافة مهمة جديدة",
+    "TODO": "مهام",
+    "INPROGRESS": "قيد التنفيذ",
+    "DONE": "تم الإنجاز",
+    "ASSIGNED_TO": "مخصص لـ",
+    "ASSIGNE_TO": "تخصيص إلى",
+    "TITLE": "العنوان",
+    "MORE_DETAILS": "المزيد من التفاصيل",
+    "DESCRIPTION": "الوصف"
+  },
+    "USERS": {
+      "ADD_NEW_USER": "إضافة مستخدم جديد",
+      "FULL_NAME": "الاسم بالكامل",
+      "FIRST_NAME": "الاسم الأول",
+      "LAST_NAME": "الاسم الأخير",
+      "ROLE": "الدور",
+      "ID": "الرقم التعريفي",
+      "EMAIL": "البريد الإلكتروني",
+      "PHONE": "الهاتف",
+      "NATIONAL_ID": "الهوية الوطنية",
+      "PASSWORD": "كلمة المرور",
+      "CONFIRM_PASSWORD": "تأكيد كلمة المرور",
+      "TOTAL_USERS": "إجمالي المستخدمين",
+      "TOP_USERS": "أفضل المستخدمين",
+      "LOWEST_USERS": "أقل المستخدمين"
+    }
+
+}

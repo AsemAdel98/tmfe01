@@ -1,0 +1,8 @@
+<p> {{'GENERAL.DELETE_WARNING' | translate }} {{ this.config.data?.name }}
+  {{global.currentLanguage==='ar'?'؟':'?'}}</p>
+<div class="card-button-container">
+<p-button outlined="true" size="small" severity="secondary" (click)="ref.close('close')"> {{'GENERAL.CANCEL' | translate}} </p-button>
+&nbsp;&nbsp;
+<p-button size="small" (click)="handleDelete()" [disabled]="loading" severity="danger"><i *ngIf="loading"
+    class="pi pi-spin pi-spinner"></i> {{'GENERAL.DELETE' | translate}}</p-button>
+</div>

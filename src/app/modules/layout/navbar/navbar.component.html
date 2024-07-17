@@ -1,0 +1,23 @@
+<nav class="nav-bar-container p-3">
+  <div><h2>{{Pagetitle|translate}}</h2> </div>
+  <div class="d-flex align-items-center">
+    <p-menu #menu [model]="items" [popup]="true" />
+    <p-button (click)="menu.toggle($event)" [text]="true" severity="contrast" size="small">
+      <span class="d-flex align-items-center ">
+        <div class="material-symbols-outlined">Language</div>&nbsp;&nbsp;
+        <div>{{ global.currentLanguage === 'ar'?'العربية':'English' }}</div>&nbsp;&nbsp;
+        <div [ngStyle]="{'transform': menu.visible ? 'rotate(180deg)' : ''}" class="material-symbols-outlined">
+          Keyboard_Arrow_Down</div>
+      </span>
+    </p-button>
+
+
+    <div class="user-profile mx-3" routerLink="/user-profile" pRipple>
+      <img [src]="userData.avatar" alt="user avatar">&nbsp;&nbsp;
+      <div class="text-center">
+        <p class="mb-0">{{userData.first_name}} {{userData.last_name}}</p>
+        <span>{{userData.role}}</span>
+      </div>
+    </div>
+  </div>
+</nav>

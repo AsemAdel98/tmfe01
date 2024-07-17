@@ -1,0 +1,66 @@
+@import "../../../../assets/styles/variables.scss";
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.active {
+  background-color: #ffffff36;
+  border-radius: 8px;
+}
+.sidebar {
+  padding: 0;
+  width: 72px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+
+  ul {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  li {
+    cursor: pointer;
+    width: 100%;
+    .material-symbols-outlined {
+      color: #fff;
+      font-size: 24px;
+    }
+  }
+}
+
+.sidebar-menu {
+  height: calc(100vh - 190px);
+  width: 100%;
+  overflow: auto;
+}
+
+
+.user-profile {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .user-profile {
+    display: unset;
+
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<form [formGroup]="userForm">
+  <div class="row">
+    <!-- ------------------------ avatar ------------------------ -->
+    <div class="col-md-12 d-flex justify-content-center mb-3">
+      <app-image-selector-with-gallery [imageArray]="usersService.imgArray" [patchImage]="config.data.avatar"
+        (selectedImageValue)="userForm.get('avatar')?.setValue($event)"></app-image-selector-with-gallery>
+    </div>
+    <!-- ------------------------ first name ------------------------ -->
+    <div class="col-xl-4">
+      <p-floatLabel>
+        <input pInputText id="first_name" formControlName="first_name" />
+        <label for="first_name">{{'USERS.FIRST_NAME'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------ last name ------------------------ -->
+    <div class="col-xl-4">
+      <p-floatLabel>
+        <input pInputText id="last_name" formControlName="last_name" />
+        <label for="last_name">{{'USERS.LAST_NAME'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------role ------------------------ -->
+    <div class="col-xl-4">
+      <p-floatLabel>
+        <p-dropdown id="role" formControlName="role" [options]="role" >
+        </p-dropdown>
+        <label for="role">{{'USERS.ROLE'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------email ------------------------ -->
+    <div class="col-xl-4">
+      <p-floatLabel>
+        <input pInputText type="email" id="email" formControlName="email" />
+        <label for="email">{{'USERS.EMAIL'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------ Phone ------------------------ -->
+    <div class="col-xl-4">
+      <p-floatLabel>
+        <p-inputMask mask="(+2) 999-99999999" id="phone_number" formControlName="phone_number"
+          placeholder="(+2) 999-99999999" />
+        <label for="phone_number">{{ 'USERS.PHONE' | translate }}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------National ID ------------------------ -->
+    <div class="col-xl-4">
+      <p-floatLabel>
+        <input pInputText type="number" id="national_id" formControlName="national_id" />
+        <label for="national_id">{{'USERS.NATIONAL_ID'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    @if (!config.data) {
+    <!-- ------------------------ password ------------------------ -->
+    <div class="col-xl-6">
+      <p-floatLabel class="password-container">
+        <p-password id="password" formControlName="password" inputStyleClass="w-100" [toggleMask]="true">
+          <ng-template pTemplate="header">
+            <p class="mt-2">{{'PASSWORD.FORMULATE_PASSWORDS'|translate}}</p>
+          </ng-template>
+          <ng-template pTemplate="footer">
+            <p-divider></p-divider>
+            <ul class="p-2 m-2 mt-0" style="line-height: 1.5">
+              <li *ngFor="let criterion of passwordCriteriaService.passwordCriteria"
+                [ngClass]="criterion.isMet() ? 'criteria-met criteria-password-valid' : 'criteria-not-met criteria-password-invalid'">
+                <i [ngClass]="criterion.isMet() ? 'pi pi-check' : 'pi pi-circle-on'"></i>
+                {{ criterion.text | translate}}
+              </li>
+            </ul>
+          </ng-template>
+        </p-password>
+        <label for="password">{{'USERS.PASSWORD'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------ confirm password ------------------------ -->
+    <div class="col-xl-6">
+      <p-floatLabel>
+        <p-password id="password" formControlName="confirm_password" [toggleMask]="true" feedback="false"
+          inputStyleClass="w-100"></p-password>
+        <label for="password">{{'USERS.CONFIRM_PASSWORD'|translate}}</label>
+      </p-floatLabel>
+      <small *ngIf="userForm.hasError('passwordsMatch', 'confirm_password')">
+        {{"PASSWORD.CONFIRM_PASSWORD_ALERT"|translate}}</small>
+    </div>
+    }
+
+  </div>
+</form>
+
+<app-dialog-buttons [buttons]="action_button" [form]="userForm" [type]="config.data?'edit':'add'"
+  [loading]="loading"></app-dialog-buttons>

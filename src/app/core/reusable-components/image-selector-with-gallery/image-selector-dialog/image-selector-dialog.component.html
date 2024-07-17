@@ -1,0 +1,49 @@
+<form [formGroup]="selectedImgForm">
+  <p-tabView>
+    <p-tabPanel header="{{'IMAGE_SELECTOR.SELECT_IMAGE'|translate}}" *ngIf="config.data.imageArray">
+      <p-selectButton [options]="config.data.imageArray" (onChange)="convertImageToFormData($event)" class="mt-4">
+        <ng-template let-item pTemplate>
+          <img [src]="item" alt="image">
+        </ng-template>
+      </p-selectButton>
+    </p-tabPanel>
+
+
+
+    <p-tabPanel header="{{'IMAGE_SELECTOR.SELECT_ICON'|translate}}" *ngIf="config.data.iconArray">
+      <p-selectButton [options]="config.data.iconArray" (onChange)="convertImageToFormData($event)">
+        <ng-template let-item pTemplate>
+          <img [src]="item" alt="image">
+        </ng-template>
+      </p-selectButton>
+    </p-tabPanel>
+
+
+
+
+    <p-tabPanel header="{{'IMAGE_SELECTOR.UPLOAD_IMAGE'|translate}}">
+      <p-fileUpload auto="true" showUploadButton="false" showCancelButton="false" accept="image/*"
+        chooseLabel="{{'IMAGE_SELECTOR.BROWSE_IMG'|translate}}" [multiple]="false" #ChoosedFile
+        (onBeforeUpload)="onUploadImage(ChoosedFile.files[0])" (onRemove)="removeFile()">
+        <ng-template pTemplate="chooseicon"><span class="material-symbols-outlined">Upload</span></ng-template>
+        <ng-template pTemplate="content">
+          <p class="text-center my-4" *ngIf="!ChoosedFile.files[0]">{{'IMAGE_SELECTOR.CHOOSE_IMG_MSG'|translate}}</p>
+        </ng-template>
+      </p-fileUpload>
+    </p-tabPanel>
+
+
+
+
+
+
+  </p-tabView>
+</form>
+
+
+<div class="card-button-container">
+  <p-button label="{{'GENERAL.CANCEL' | translate}}" outlined="true" size="small" severity="secondary"
+    (click)="ref.close('cancel')" />&nbsp;&nbsp;
+  <p-button label="{{'GENERAL.SUBMIT' | translate}}" size="small" (click)="handleGetImage()" severity="primary"
+    [disabled]="validForm" />
+</div>

@@ -1,0 +1,79 @@
+p-float-label,
+.p-float-label {
+  margin-top: 1.5rem;
+}
+.p-breadcrumb {
+  border: 0;
+  background-color: unset;
+}
+
+p-inputnumber,
+p-dropdown,
+p-password,
+.p-multiselect,
+textarea,
+input, .p-inputnumber,
+.p-dropdown,
+.p-password
+{
+width: 100%;
+display: inline-flex;
+}
+
+p-fileUpload{
+  input{
+    display: none;
+  }
+}
+
+p-paginator{
+  p-dropdown{
+    width: auto;
+  }
+}
+
+
+.p-tabview .p-tabview-panels {
+  display: contents;
+}
+.p-tabview-nav-container {
+  margin-bottom: 1.5rem;
+}
+
+.p-card-title {
+  font-size: 1.3rem !important;
+}
+
+.p-card-content {
+  padding-bottom: 0;
+  overflow: auto;
+}
+
+.p-card-footer {
+  padding-top: 0;
+}
+
+canvas {
+  width: 100% !important;
+}
+
+
+.p-card {
+  border-radius: 12px;
+  .p-card-body {
+    padding-top: 0;
+  }
+  .p-card-title {
+    padding-top: 1.5rem;
+  }
+}
+
+.p-menuitem-content{
+  button{width: 100%;}
+}
+
+.p-dialog-content{
+  padding-bottom: 4.5rem;
+}
+
+

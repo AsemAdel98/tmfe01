@@ -1,0 +1,86 @@
+{
+  "TITLE": "Title",
+  "LOGIN": {
+    "WELCOME_BACK": "Welcome back",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "LOGIN": "Login"
+  },
+  "NAVBAR": {
+    "ARABIC": "Arabic",
+    "ENGLISH": "English",
+    "LOGGED_OUT_MSG": "Are you sure you want to log out?"
+  },
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "USERS": "Users",
+    "TASKS": "Tasks",
+    "USER_PROFILE": "User profile"
+  },
+  "GENERAL": {
+    "NAME_EN": "English name",
+    "NAME_AR": "Arabic name",
+    "CREATED_AT": "Created at",
+    "CREATED_BY": "Created by",
+    "MODIFIED_AT": "Modified at",
+    "FILTERS": "Filters",
+    "DELETE": "Delete",
+    "DELETE_WARNING": "Are you sure you want to delete",
+    "EDIT": "Edit",
+    "ADD": "Create",
+    "SAVE": "Save",
+    "VIEW": "View",
+    "CANCEL": "Cancel",
+    "BACK": "Back",
+    "ACTIONS": "Actions",
+    "SUBMIT": "Submit",
+    "ID": "ID",
+    "SHOW_ANALYTICS": "Show analytics",
+    "HIDE_ANALYTICS": "Hide analytics",
+    "ASSIGNED": "Assigned",
+    "LOGOUT": "Log out"
+  },
+  "PASSWORD": {
+    "CONFIRM_PASSWORD_ALERT": "Passwords do not match.",
+    "FORMULATE_PASSWORDS": "Formulate secure passwords",
+    "ONE_LOWERCASE": "At least one lowercase",
+    "ONE_UPPERCASE": "At least one uppercase",
+    "ONE_NUMBRIC": "At least one numeric",
+    "ONE_SYMBOL": "At least one symbol",
+    "8_CHARACTERS": "Minimum 8 characters"
+  },
+  "IMAGE_SELECTOR": {
+    "SELECT_IMAGE": "Select image",
+    "SELECT_ICON": "Select icon",
+    "UPLOAD_IMAGE": "Upload image",
+    "BROWSE_IMG": "Browse Images",
+    "CHOOSE_IMG_MSG": "Drag and drop files to here to upload."
+  },
+  "TASKS": {
+    "ADD_NEW_TASK": "Add New task",
+    "TODO": "To do",
+    "INPROGRESS": "In progress",
+    "DONE": "Done",
+    "ASSIGNED_TO": "Assigned to",
+    "ASSIGNE_TO": "Assigne to",
+    "TITLE": "Title",
+    "MORE_DETAILS": "More details",
+    "DESCRIPTION": "Description"
+  },
+  "USERS": {
+    "ADD_NEW_USER": "Add new user",
+    "FULL_NAME": "Full name",
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "ROLE": "Role",
+    "ID": "ID",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "NATIONAL_ID": "National ID",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "TOTAL_USERS": "Total users",
+    "TOP_USERS": "Top users",
+    "LOWEST_USERS": "Lowest users"
+  }
+}

@@ -1,0 +1,8 @@
+<p-avatar (click)="openImageSelectorDialog()" styleClass="mr-2" size="xlarge" shape="circle">
+  @if (selectedImage) {
+    <img [src]="selectedImage.objectURL?selectedImage.objectURL:selectedImage.image" alt="image">
+  }@else{
+    <img [src]="patchImage?patchImage:'../../../../assets/imgs/placeholder3.png'" alt="image" >
+  }
+  <span class="material-symbols-outlined">photo_camera</span>
+</p-avatar>

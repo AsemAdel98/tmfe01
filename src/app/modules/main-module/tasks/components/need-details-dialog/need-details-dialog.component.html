@@ -1,0 +1,17 @@
+<form [formGroup]="taskForm">
+  <div class="row">
+    <!-- ------------------------ more_details ------------------------ -->
+    <div class="col-xl-12">
+      <p-floatLabel>
+        <textarea rows="5" cols="30" id="more_details" pInputTextarea formControlName="more_details"></textarea>
+        <label for="more_details">{{'TASKS.MORE_DETAILS'|translate}}</label>
+      </p-floatLabel>
+    </div>
+
+  </div>
+</form>
+
+<div class="card-button-container">
+  <p-button size="small" severity="secondary" (onClick)="ref.close('close')">{{ "GENERAL.ADD"
+    |translate }}</p-button>
+</div>

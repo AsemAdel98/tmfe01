@@ -1,0 +1,47 @@
+:root {
+  --body-color: #FAFAFB;
+  --logo: url(../imgs/logo/logo.png);
+  --logo-login: url(../imgs/logo/logo-dark.png);
+
+  --First-primary-color: #14ADC6;
+  --Second-primary-color: #43BDD1;
+  --Third-primary-color: #8AD6E3;
+  --Fourth-primary-color: #B9E6EE;
+  --Fifth-primary-color: #B9E6EE;
+
+
+
+  --background-center: no-repeat center/cover;
+  --background-center-contain: no-repeat center/contain;
+}
+
+
+
+
+
+
+// ------------------------------------------- fonts
+$LamaSans-regular: "LamaSans-regular";
+$LamaSans-medium: "LamaSans-medium";
+$LamaSans-Bold: "LamaSans-Bold";
+$LamaSans-SemiBold: "LamaSans-SemiBold";
+
+@font-face {
+  font-family: "LamaSans-regular";
+  src: url("../fonts/LamaSans_Standard/LamaSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "LamaSans-medium";
+  src: url("../fonts/LamaSans_Standard/LamaSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "LamaSans-Bold";
+  src: url("../fonts/LamaSans_Standard/LamaSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "LamaSans-SemiBold";
+  src: url("../fonts/LamaSans_Standard/LamaSans-SemiBold.ttf");
+}

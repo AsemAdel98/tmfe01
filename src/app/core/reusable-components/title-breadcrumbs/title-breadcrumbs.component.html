@@ -1,0 +1,12 @@
+<div class="mb-4">
+  <h1>{{title |translate}}</h1>
+  <p-breadcrumb
+  [model]="items"
+  [home]="home">
+  <ng-template pTemplate="item" let-item>
+        <a [routerLink]="item.route?item.route:null">
+            <span [ngClass]="item.route?'text-primary':''">{{ item.label |translate }}</span>
+        </a>
+    </ng-template>
+</p-breadcrumb>
+</div>

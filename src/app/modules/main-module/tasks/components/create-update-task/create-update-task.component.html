@@ -1,0 +1,41 @@
+<form [formGroup]="taskForm">
+  <div class="row">
+    <!-- ------------------------ Assigned ------------------------ -->
+    <div class="col-xl-12">
+      <p-floatLabel>
+        <p-dropdown [options]="users" optionValue="id" formControlName="user" [showClear]="true">
+          <ng-template let-user pTemplate="selectedItem">
+            <div class="flex align-items-center gap-2">
+              <img [src]="user.avatar" style="width: 30px;height: 30px;object-fit: contain;border-radius: 50%;" />
+              <p>{{ user.first_name }} {{ user.last_name }}</p>
+            </div>
+          </ng-template>
+          <ng-template let-user pTemplate="item">
+            <div class="flex align-items-center gap-2">
+              <img [src]="user.avatar" style="width: 30px;height: 30px;object-fit: contain;border-radius: 50%;" />
+              <p>{{ user.first_name }} {{ user.last_name }}</p>
+            </div>
+          </ng-template>
+        </p-dropdown>
+        <label for="role">{{'TASKS.ASSIGNE_TO'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------ Title ------------------------ -->
+    <div class="col-xl-12">
+      <p-floatLabel>
+        <input pInputText id="title" formControlName="title" />
+        <label for="title">{{'TASKS.TITLE'|translate}}</label>
+      </p-floatLabel>
+    </div>
+    <!-- ------------------------ Description ------------------------ -->
+    <div class="col-xl-12">
+      <p-floatLabel>
+        <textarea rows="5" cols="30" id="description" pInputTextarea formControlName="description"></textarea>
+        <label for="description">{{'TASKS.DESCRIPTION'|translate}}</label>
+      </p-floatLabel>
+    </div>
+
+  </div>
+</form>
+
+<app-dialog-buttons [buttons]="action_button" [form]="taskForm" [type]="config.data?'edit':'add'"></app-dialog-buttons>

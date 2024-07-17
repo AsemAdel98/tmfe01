@@ -1,0 +1,24 @@
+<ul class="sidebar pb-3">
+  <ul>
+    <img class="navbar-logo" src="../../../../assets/imgs/logo/logo.png" alt="">
+    <ul class="sidebar-menu">
+      @for (item of menuSidebar; track $index) {
+      <li pRipple class="mt-4" [routerLink]="item.link"  [routerLinkActiveOptions]="{exact : true}" routerLinkActive="active" [pTooltip]="item.link_name|translate"
+        [tooltipPosition]="global.currentLanguage === 'ar'?'right':'left'">
+        <span class="material-symbols-outlined my-2">{{item.icon}}</span>
+      </li>
+      }
+    </ul>
+  </ul>
+
+  <ul class="account">
+    <li pRipple class="user-profile" routerLink="/user-profile">
+      <img [src]="userData.avatar" alt="user avatar">
+    </li>
+    <!-- log-out -->
+    <li pRipple class="m-4" (click)="openLogoutDialog()">
+      <span class="material-symbols-outlined">logout</span>
+    </li>
+  </ul>
+
+</ul>

@@ -1,0 +1,20 @@
+@import "../../../../../assets/styles/variables.scss";
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  margin: -20px;
+
+  .login-page-logo {
+    background: var(--logo-login) var(--background-center);
+    background-size: contain;
+    width: 200px;
+    height: 35px;
+  }
+
+  // Styling for the side image in the login form
+  .side-img {
+    width: 80%; // Make the image take up the full width of its container
+    background-size: cover; // Ensure the image covers the entire background area of its container
+  }
+}

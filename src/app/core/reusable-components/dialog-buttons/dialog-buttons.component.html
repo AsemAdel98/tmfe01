@@ -1,0 +1,7 @@
+<div class="card-button-container">
+  <p-button outlined="true" size="small" severity="secondary" (onClick)="ref.close('close')">
+    {{ 'GENERAL.CANCEL' | translate }}</p-button>
+  &nbsp;&nbsp;
+  <p-button size="small" (onClick)="buttons()" [disabled]="!form.valid || loading"><i *ngIf="loading"
+      class="pi pi-spin pi-spinner"></i>{{(type === 'add'?'GENERAL.ADD':'GENERAL.EDIT') | translate }}</p-button>
+</div>

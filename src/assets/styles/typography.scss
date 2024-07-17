@@ -1,0 +1,66 @@
+@import "variables";
+
+// Define Font Sizes
+$base-font-size: 16px;
+$small-font-size: 11px;
+$large-font-size: 18px;
+
+// Define Font Weights
+$bold-font-weight: 600;
+$semi-bold-font-weight: 500;
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+}
+
+// Define Typography Styles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  font-weight: $bold-font-weight;
+}
+
+h2,
+h3 {
+  font-weight: $semi-bold-font-weight;
+}
+
+h1 {
+  font-size: clamp(1.3125rem, 1.2465rem + 0.2113vw, 1.5rem);
+}
+
+h2 {
+  font-size: clamp(1.125rem, 1.059rem + 0.2113vw, 1.3125rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 0.956rem + 0.1408vw, 1.125rem);
+  white-space: nowrap;
+}
+
+p {
+  font-size: clamp(0.75rem, 0.706rem + 0.1408vw, 0.875rem);
+  line-height: 1.5;
+  color: var(--primary-text);
+}
+
+.small-text {
+  font-size: $small-font-size;
+  color: var(--muted-text);
+}
+
+.large-text {
+  font-size: $large-font-size;
+  color: var(--primary-text);
+}

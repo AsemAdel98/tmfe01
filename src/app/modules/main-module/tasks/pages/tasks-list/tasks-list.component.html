@@ -1,0 +1,87 @@
+<app-title-breadcrumbs [title]="'SIDEBAR.TASKS'" [items]="[{label:'SIDEBAR.TASKS'}]"></app-title-breadcrumbs>
+
+<div class="d-flex justify-content-end">
+  <p-button size="small" (onClick)="createUpdateTask()" *ngIf="userRole === 'manager'">
+    <span class="material-symbols-outlined">add</span>&nbsp;&nbsp;{{'TASKS.ADD_NEW_TASK'|translate}}</p-button>
+</div>
+
+<div class="card flex flex-nowrap gap-3">
+  <!-- --------------------------- to do --------------------------- -->
+  <div class="task-coloumn">
+    <p class="to-do">{{'TASKS.TODO'|translate}}</p>
+    <div class="task-container shadow-2 border-round-bottom">
+      @for (product of availableTasks; track $index) {
+      <p-card pDraggable (onDragStart)="dragStart(product)" (onDragEnd)="dragEnd()" styleClass="mt-3 cursor-move">
+        <div class="d-flex align-items-center justify-content-between">
+          <h2>#{{product.task_refrance}}</h2>
+          <p-button (click)="menu.toggle($event);getTaskData(product,'inProgress',availableTasks,inProgressTasks)"
+            icon="pi pi-ellipsis-v" class="w-100"
+            styleClass="p-button-rounded p-button-secondary p-button-text custom-menu-class"></p-button>
+        </div>
+        <h2>{{'TASKS.ASSIGNED_TO'|translate}} : <img [src]="product.assigned_to.avatar" class="mx-2" [alt]="product.assigned_to.first_name"> {{product.assigned_to.first_name}} {{product.assigned_to.last_name}}</h2>
+        <h2>{{'TASKS.TITLE'|translate}} : {{product.title}}</h2>
+        <h2>{{'TASKS.DESCRIPTION'|translate}} : {{product.description |wordTruncate:5}}</h2>
+        <div class="d-flex justify-content-end ">
+          <p class="py-1 px-2 text-sm"
+            [ngClass]="{'to-do': product.status === 'toDo', 'in-progress': product.status === 'inProgress', 'done': product.status === 'done'}">
+            {{product.status}}
+          </p>
+        </div>
+      </p-card>
+      }
+    </div>
+  </div>
+  <!-- --------------------------- inprogress --------------------------- -->
+  <div class="task-coloumn">
+    <p class="in-progress">{{'TASKS.INPROGRESS'|translate}}</p>
+    <div class="task-container shadow-2 border-round-bottom" pDroppable (onDrop)="drop('inProgress')">
+      @for (product of inProgressTasks; track $index) {
+      <p-card pDraggable (onDragStart)="dragStart(product)" (onDragEnd)="dragEnd()" styleClass="mt-3 cursor-move">
+        <div class="d-flex align-items-center justify-content-between">
+          <h2>#{{product.task_refrance}}</h2>
+          <p-button (click)="menu.toggle($event);getTaskData(product,'done',inProgressTasks,doneTasks)"
+            icon="pi pi-ellipsis-v" styleClass="p-button-rounded p-button-secondary p-button-text"></p-button>
+        </div>
+        <h2>{{'TASKS.ASSIGNED_TO'|translate}} : <img [src]="product.assigned_to.avatar" class="mx-2" [alt]="product.assigned_to.first_name"> {{product.assigned_to.first_name}} {{product.assigned_to.last_name}}</h2>
+        <h2>{{'TASKS.TITLE'|translate}} : {{product.title}}</h2>
+        <h2>{{'TASKS.DESCRIPTION'|translate}} : {{product.description |wordTruncate:5}}</h2>
+        <div class="d-flex justify-content-end ">
+          <p class="py-1 px-2 text-sm in-progress">{{product.status}}</p>
+        </div>
+      </p-card>
+      }
+    </div>
+  </div>
+
+  <!-- --------------------------- done --------------------------- -->
+
+
+  <div class="task-coloumn">
+    <p class="done">{{'TASKS.DONE'|translate}}</p>
+    <div class="task-container  shadow-2 border-round-bottom" pDroppable (onDrop)="drop('done')">
+      @for (product of doneTasks; track $index) {
+      <p-card styleClass="mt-3 cursor-move">
+        <div class="d-flex align-items-center justify-content-between">
+          <h2>#{{product.task_refrance}}</h2>
+
+          <p-button (click)="menu.toggle($event);getTaskData(product)" icon="pi pi-ellipsis-v" class="w-100"
+            styleClass="p-button-rounded p-button-secondary p-button-text custom-menu-class"></p-button>
+        </div>
+        <h2>{{'TASKS.ASSIGNED_TO'|translate}} : <img [src]="product.assigned_to.avatar" class="mx-2" [alt]="product.assigned_to.first_name"> {{product.assigned_to.first_name}} {{product.assigned_to.last_name}}</h2>
+        <h2>{{'TASKS.TITLE'|translate}} : {{product.title}}</h2>
+        <h2>{{'TASKS.DESCRIPTION'|translate}} : {{product.description |wordTruncate:5}}</h2>
+        <div class="d-flex justify-content-end ">
+          <p class="py-1 px-2 text-sm done">{{product.status}}</p>
+        </div>
+      </p-card>
+      }
+    </div>
+  </div>
+
+</div>
+<p-menu #menu [model]="items" [popup]="true">
+  <ng-template pTemplate="item" let-item>
+    <p-button (click)="item.command" styleClass="p-button-secondary p-button-text" [label]="item.label |translate"
+      [icon]="item.icon"></p-button>
+  </ng-template>
+</p-menu>

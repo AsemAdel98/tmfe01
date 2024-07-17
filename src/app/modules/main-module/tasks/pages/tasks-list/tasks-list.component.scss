@@ -1,0 +1,42 @@
+.task-container{
+  padding: 8px;
+  height: calc(100vh - 350px);
+  overflow: auto;
+  width: 400px;
+
+}
+.task-coloumn{
+  width: 400px;
+  p{
+    font-size: 22px;
+    font-weight: 500;
+    background-color: aqua;
+    padding: 12px 0;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0;
+    &.to-do {
+      background-color: #f1f5f9;
+      color: #626e80;
+    }
+
+    &.in-progress {
+      background-color: #fefce9;
+      color: #cf961d;
+    }
+
+    &.done {
+      background-color: #f1fdf5;
+      color: #35b063;
+    }
+  }
+}
+h2{
+  font-size:  1rem;
+}
+img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 50%;
+}

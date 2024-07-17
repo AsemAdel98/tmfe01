@@ -1,0 +1,30 @@
+<div class="row d-flex justify-content-center mt-5">
+  <p-card class="col-xl-6" dir="ltr">
+      <!-- ------------------------ image ------------------------ -->
+      <div class="d-flex justify-content-center mb-3">
+        <p-avatar styleClass="mr-2" size="xlarge" shape="circle">
+          <p-image [src]="userData.avatar" alt="image" [preview]="true" />
+        </p-avatar>
+      </div>
+      <!-- ------------------------ full name ------------------------ -->
+      <div class="d-flex align-items-center mb-3">
+        <i class="pi pi-user"></i>&nbsp;&nbsp;:&nbsp;&nbsp;
+        {{ userData.first_name}} {{userData.last_name}}
+      </div>
+      <!-- ------------------------ email ------------------------ -->
+      <div class="d-flex align-items-center mb-3">
+        <i class="pi pi-envelope"></i>&nbsp;&nbsp;:&nbsp;&nbsp;
+        {{userData.email}}
+      </div>
+      <!-- ------------------------ phone ------------------------ -->
+      <div class="d-flex align-items-center mb-3">
+        <i class="pi pi-phone"></i>&nbsp;&nbsp;:&nbsp;&nbsp;
+        {{userData.phone_number}}
+      </div>
+      <!-- ------------------------ national_id ------------------------ -->
+      <div class="d-flex align-items-center mb-3">
+        <i class="pi pi-id-card"></i>&nbsp;&nbsp;:&nbsp;&nbsp;
+        {{userData.national_id}}
+      </div>
+  </p-card>
+</div>
