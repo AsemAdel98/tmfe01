@@ -54,13 +54,13 @@ The Task Management Application is designed to streamline task handling within a
 Login
 Users must log in using their username and password.
 
-Admin Dashboard
+- **Admin Dashboard:**
 Admins can access the user management form to create and manage user accounts. They have the ability to add, edit, and delete users.
 
-Manager Dashboard
+- **Manager Dashboard:**
 Managers can create, edit, and assign tasks to users. They can also see all tasks assigned to their team members. However, they cannot edit tasks that have been marked as "Done" by the users.
 
-User Dashboard
+- **User Dashboard:**
 Users can view tasks assigned to them and update the status of their tasks to "Done" or "Need Details".
 
 ### Styling and Design
@@ -70,7 +70,7 @@ The application is designed with basic styling to ensure a visually appealing an
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
 ### Sample Users
-Asem Adel (admin@info.co, password: 12345678) - Admin
-Mahmoud Medhat (manager@info.co, password: 12345678) - Manager
-Mohamed Salah (user@info.co, password: 12345678) - User
-Amr Adel (amr.adel@info.co, password: 12345678) - User
+- Asem Adel (admin@info.co, password: 12345678) - Admin
+- Mahmoud Medhat (manager@info.co, password: 12345678) - Manager
+- Mohamed Salah (user@info.co, password: 12345678) - User
+- Amr Adel (amr.adel@info.co, password: 12345678) - User
